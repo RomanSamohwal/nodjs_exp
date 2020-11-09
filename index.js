@@ -14,7 +14,7 @@ db.once('open', function (){
 
 
 const app = express()
-const port = 7542
+const port = process.env.PORT
 
 app.use(cors())
 
@@ -31,7 +31,7 @@ app.use((req, res) => {
     res.send(404)
 })
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Example app listening at http://localhost:` + process.env.PORT)
 })
 
