@@ -8,11 +8,25 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('MyUser', userSchema)
 
 
-const getUsers = () => {
-   return  User.find()
+const getUsers = (search) => {
+    if (!search) {
+        return User.find()
+    } else {
+        return User.find({name: new RegExp(search) })
+    }
 }
 
-const deleteUser = ()
+const getUser = (id) => {
+    return User.find({_id: id})
+}
+
+const deleteUser = (id) => {
+    return User.deleteOne({_id: id})
+}
+
+const updateUser = (id, name) => {
+    return User.update({_id: id}, {name: name})
+}
 
 const addUser = async (name) => {
     let user = new User({name: name})
@@ -27,3 +41,6 @@ const addUser = async (name) => {
 
 exports.getUsers = getUsers
 exports.addUser = addUser
+exports.deleteUser = deleteUser
+exports.getUser = getUser
+exports.updateUser = updateUser
