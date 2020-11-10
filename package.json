@@ -2,8 +2,8 @@
   "name": "my-back-2-0",
   "version": "1.0.0",
   "scripts": {
-    "start": "nodemon --inspect index.js lokalhost 7542",
-    "simple-start": "SET PORT=8765 && node index.js",
+    "start": "SET PORT=7542 && nodemon --inspect index.js localhost 7542",
+    "simple-start": "SET PORT=7542 && node index.js",
     "watch": "tsc -w"
   },
   "dependencies": {
