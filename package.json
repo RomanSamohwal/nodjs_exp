@@ -2,10 +2,10 @@
   "name": "my-back-2-0",
   "version": "1.0.0",
   "scripts": {
-    "start": "SET PORT=7542 && nodemon --inspect index.js localhost 7542",
-    "simple-start": "SET PORT=7542 && node index.js",
+    "simple-start": "SET PORT=7542 && nodemon --inspect index.js localhost 7542",
     "watch": "tsc -w",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "SET PORT=7542 && node index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
