@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('MyUser', userSchema)
 
-
 const getUsers = (search) => {
     if (!search) {
         return User.find()

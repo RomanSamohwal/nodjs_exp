@@ -4,7 +4,8 @@
   "scripts": {
     "start": "SET PORT=7542 && nodemon --inspect index.js localhost 7542",
     "simple-start": "SET PORT=7542 && node index.js",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "build": "tsc"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
